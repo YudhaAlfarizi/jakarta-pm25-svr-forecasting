@@ -116,8 +116,8 @@ Daftar lengkap: [`docs/metodologi.md`](docs/metodologi.md#referensi).
 
 ## Penulis
 
-**YudhaAlfarizi** — Lulusan Matematika · [LinkedIn](#) · [Email](#)
+**YudhaAlfarizi** — Lulusan Matematika · [LinkedIn](https://www.linkedin.com/in/yudha-alfarizi-07588a286/) · [Email](yudhaaakerja29072026@gmail.com)
 
 ## Lisensi
 
-Kode dirilis di bawah lisensi MIT. Dataset mengikuti lisensi sumber aslinya (Satu Data Indonesia).
+Kode dirilis di bawah lisensi MIT. Dataset mengikuti lisensi sumber aslinya (kaggle).
