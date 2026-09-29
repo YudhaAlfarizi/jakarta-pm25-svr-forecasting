@@ -66,7 +66,7 @@ Aturan yang dipakai di notebook 01 dan 03:
 
 Batas 3 hari adalah **keputusan desain**, bukan aturan baku, dipilih agar interpolasi hanya menyentuh celah yang jauh lebih pendek daripada dinamika harian PM2.5. Perlu dicatat juga bahwa interpolasi memakai nilai di kedua sisi celah, sehingga sedikit informasi "masa depan" ikut masuk ke titik yang diisi — dampaknya kecil karena hanya celah pendek yang diisi, tapi tetap dicatat sebagai keterbatasan (lihat [`metodologi.md`](metodologi.md)).
 
-Variabel pendukung seperti `pm10` diketahui memiliki celah yang jauh lebih panjang pada 2023, dan celah itu **tidak diinterpolasi** karena akan menciptakan data buatan yang tidak realistis di musim puncak. Skenario model yang memakai `pm10` karena itu memakai data latih yang lebih sedikit dibanding skenario yang tidak memakainya. Angka pasti panjang celah ini divalidasi ulang di notebook 01.
+Variabel pendukung seperti `pm10` diketahui memiliki celah yang jauh lebih panjang pada 2023, dan celah itu **tidak diinterpolasi** karena akan menciptakan data buatan yang tidak realistis di musim puncak. Skenario model yang memakai `pm10` karena itu memakai data latih yang lebih sedikit dibanding skenario yang tidak memakainya.
 
 ## 6. Bentuk data di tiap tahap
 
