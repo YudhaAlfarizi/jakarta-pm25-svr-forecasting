@@ -41,7 +41,7 @@ Konsekuensinya:
 Periode yang dipakai untuk pemodelan adalah **1 Januari 2021 – 28 Februari 2025**.
 
 Jumlah hari (kalender): 1,520
-'Tanggal hilang        : 0'
+Tanggal hilang        : 0
 pm25 NaN sebelum      : 4
 pm25 NaN sesudah      : 0
 Batas interpolasi     : 3 hari
