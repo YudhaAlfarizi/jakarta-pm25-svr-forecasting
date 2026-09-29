@@ -54,7 +54,6 @@ so2   :   22 hari NaN dalam  16 celah (0 celah > 3 hari)
 co    :   22 hari NaN dalam  14 celah (0 celah > 3 hari)
 o3    :   23 hari NaN dalam  15 celah (1 celah > 3 hari)
 no2   :   14 hari NaN dalam  11 celah (0 celah > 3 hari)
-============================================================
 
 ## 5. `ispu_dki_all.csv` adalah gabungan 5 stasiun
 
