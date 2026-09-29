@@ -53,19 +53,7 @@ co    :   22 hari NaN dalam  14 celah (0 celah > 3 hari)
 o3    :   23 hari NaN dalam  15 celah (1 celah > 3 hari)
 no2   :   14 hari NaN dalam  11 celah (0 celah > 3 hari)
 
-## 5. `ispu_dki_all.csv` adalah gabungan 5 stasiun
-
-Satu baris per tanggal. Kolom `stasiun` menunjukkan **stasiun mana yang nilainya tertinggi pada hari itu**, dan berganti-ganti setiap hari. Seri yang dimodelkan adalah:
-
-> **nilai ISPU PM2.5 tertinggi di antara 5 stasiun pemantau DKI Jakarta per hari.**
-
-Implikasi:
-- `stasiun` **tidak dipakai sebagai fitur**, karena tidak diketahui sebelum hari itu terjadi.
-- Data **tidak dipisah per stasiun** dari file ini, karena tiap stasiun hanya muncul di sebagian hari (perlu diverifikasi ulang pola kemunculannya di notebook 01) sehingga seri per stasiun menjadi bolong.
-- Ada kemungkinan bias seleksi: stasiun yang kebetulan tertinggi hari itu yang tercatat, bukan representasi rata-rata kota.
-- Untuk analisis per stasiun, dataset per tahun di Satu Data Indonesia atau file `ispu_dki 1–5` bisa dipakai sebagai pengembangan lanjutan.
-
-## 6. Penanganan missing value
+## 5. Penanganan missing value
 
 Aturan yang dipakai di notebook 01 dan 03:
 
@@ -80,7 +68,7 @@ Batas 3 hari adalah **keputusan desain**, bukan aturan baku, dipilih agar interp
 
 Variabel pendukung seperti `pm10` diketahui memiliki celah yang jauh lebih panjang pada 2023, dan celah itu **tidak diinterpolasi** karena akan menciptakan data buatan yang tidak realistis di musim puncak. Skenario model yang memakai `pm10` karena itu memakai data latih yang lebih sedikit dibanding skenario yang tidak memakainya. Angka pasti panjang celah ini divalidasi ulang di notebook 01.
 
-## 7. Bentuk data di tiap tahap
+## 6. Bentuk data di tiap tahap
 
 **Data mentah**
 
@@ -105,7 +93,7 @@ tanggal     pm25  pm25_lag1  pm25_lag2  pm25_lag3  pm25_lag7  pm25_roll7  month_
 
 Baris pertama mulai 7 hari setelah data tersedia karena `lag7` membutuhkan riwayat 7 hari sebelumnya.
 
-## 8. Variabel yang diuji sebagai eksperimen (notebook 04)
+## 7. Variabel yang diuji sebagai eksperimen (notebook 04)
 
 Model utama hanya memakai riwayat `pm25` sendiri. Sebagai eksperimen pembanding, diuji penambahan:
 
@@ -115,7 +103,7 @@ Model utama hanya memakai riwayat `pm25` sendiri. Sebagai eksperimen pembanding,
 
 Semua variabel pendukung memakai nilai **hari sebelumnya** (`shift(1)`), karena pada saat meramalkan hari t, nilai polutan pada hari t belum diketahui.
 
-## 9. Keterbatasan dataset
+## 8. Keterbatasan dataset
 
 1. Nilai PM2.5 hanya tersedia ±4 tahun dari keseluruhan rentang file (2010–2025).
 2. File gabungan bukan seri satu stasiun, sehingga interpretasi spasial terbatas.
@@ -123,8 +111,3 @@ Semua variabel pendukung memakai nilai **hari sebelumnya** (`shift(1)`), karena 
 4. `pm10` memiliki celah panjang di 2023 yang membatasi skenario eksperimen yang memakainya.
 5. Tidak ada variabel meteorologi dalam file ini.
 
-## 10. Cara mendapatkan data
-
-1. Unduh `ispu_dki_all.csv` dari sumber pada bagian [Sumber Data](#1-sumber-data).
-2. Simpan sebagai `data/ispu_dki_all.csv`.
-3. Jalankan `01_data_wrangling.ipynb`, yang menghasilkan `data/pm25_daily.csv`.
