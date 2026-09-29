@@ -41,14 +41,20 @@ Konsekuensinya:
 
 Nilai `pm25` kosong sepenuhnya sebelum 2021 pada file gabungan ini. Periode yang dipakai untuk pemodelan adalah **1 Januari 2021 – 28 Februari 2025**.
 
-Notebook 01 memverifikasi dan mencatat secara pasti:
-- tanggal awal dan akhir data `pm25` yang valid,
-- jumlah hari dalam periode tersebut,
-- jumlah tanggal yang hilang dari deret harian,
-- jumlah dan lokasi missing value pada `pm25` serta variabel lain,
-- statistik deskriptif dan korelasi antar polutan.
+Periode dipakai       : 2021-01-01 s.d. 2025-02-28
+Jumlah hari (kalender): 1,520
+Tanggal hilang        : 0
+pm25 NaN sebelum      : 4
+pm25 NaN sesudah      : 0
+Batas interpolasi     : 3 hari
 
-> Angka-angka ini sebelumnya sudah dihitung langsung dari file yang diunggah dan disebut di sepanjang diskusi proyek ini (misalnya 1.520 hari, 4 hari kosong pada `pm25`, korelasi PM10 sekitar 0,80). Angka itu berasal dari perhitungan nyata, bukan perkiraan, tetapi tetap **harus dihasilkan ulang oleh notebook 01** dan dicatat di sana, supaya siapa pun yang menjalankan proyek ini bisa memverifikasi sendiri dari file CSV, bukan mempercayai angka yang ditempel di dokumentasi.
+pm25  :    4 hari NaN dalam   4 celah (0 celah > 3 hari)
+pm10  :  200 hari NaN dalam  30 celah (10 celah > 3 hari)
+so2   :   22 hari NaN dalam  16 celah (0 celah > 3 hari)
+co    :   22 hari NaN dalam  14 celah (0 celah > 3 hari)
+o3    :   23 hari NaN dalam  15 celah (1 celah > 3 hari)
+no2   :   14 hari NaN dalam  11 celah (0 celah > 3 hari)
+============================================================
 
 ## 5. `ispu_dki_all.csv` adalah gabungan 5 stasiun
 
