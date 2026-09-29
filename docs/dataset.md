@@ -38,10 +38,8 @@ Konsekuensinya:
 - Skala indeks berkorespondensi dengan kategori kualitas udara (mis. Baik, Sedang, Tidak Sehat), sesuai Permen LHK No. 14/2020.
 
 ## 4. Periode yang dipakai: 2021–2025
+Periode yang dipakai untuk pemodelan adalah **1 Januari 2021 – 28 Februari 2025**.
 
-Nilai `pm25` kosong sepenuhnya sebelum 2021 pada file gabungan ini. Periode yang dipakai untuk pemodelan adalah **1 Januari 2021 – 28 Februari 2025**.
-
-Periode dipakai       : 2021-01-01 s.d. 2025-02-28
 Jumlah hari (kalender): 1,520
 Tanggal hilang        : 0
 pm25 NaN sebelum      : 4
