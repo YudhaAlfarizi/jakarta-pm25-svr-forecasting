@@ -116,7 +116,7 @@ Daftar lengkap: [`docs/metodologi.md`](docs/metodologi.md#referensi).
 
 ## Penulis
 
-**Yudha Alfarizi** — Lulusan Matematika · [LinkedIn](https://www.linkedin.com/in/yudha-alfarizi-07588a286/) ·📧[📧 Kirim Email](https://mail.google.com/mail/?view=cm&fs=1&to=yudhaaakerja29072026@gmail.com)
+**Yudha Alfarizi** — Lulusan Matematika · [LinkedIn](https://www.linkedin.com/in/yudha-alfarizi-07588a286/) · [📧 Email](https://mail.google.com/mail/?view=cm&fs=1&to=yudhaaakerja29072026@gmail.com)
 
 ## Lisensi
 
