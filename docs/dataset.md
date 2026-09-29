@@ -5,12 +5,13 @@
 ## 1. Sumber Data
 
 - **Nama:** Indeks Standar Pencemar Udara (ISPU) DKI Jakarta
+- **Sumber:** Kaggle
 - **Penerbit:** Dinas Lingkungan Hidup Provinsi DKI Jakarta
 - **Portal:** Satu Data Indonesia (`katalog.data.go.id`), dipublikasikan per tahun (2010–2023) dengan kolom yang sama seperti `ispu_dki_all.csv`: `tanggal, stasiun, pm10, so2, co, o3, no2, max, critical, categori`
 - **File yang dipakai:** `ispu_dki_all.csv`
 - **Cakupan file:** 1 Januari 2010 – 28 Februari 2025
 
-[ISI: tautan persis ke dataset yang kamu unduh, dan cek juga apakah versi terbaru tersedia di `udara.jakarta.go.id` — situs resmi Dinas LH DKI Jakarta untuk pemantauan kualitas udara]
+[https://www.kaggle.com/datasets/senadu34/air-quality-index-in-jakarta-2010-2021]
 
 Periksa lisensi/ketentuan penggunaan di halaman sumber sebelum mengunggah file mentah ke repositori publik.
 
