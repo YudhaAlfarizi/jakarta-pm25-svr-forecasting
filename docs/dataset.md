@@ -13,7 +13,6 @@
 
 [https://www.kaggle.com/datasets/senadu34/air-quality-index-in-jakarta-2010-2021]
 
-Periksa lisensi/ketentuan penggunaan di halaman sumber sebelum mengunggah file mentah ke repositori publik.
 
 ## 2. Kolom
 
