@@ -18,10 +18,10 @@ Jalankan berurutan. Klik tombol Colab untuk membuka langsung.
 
 | # | Notebook | Isi | Colab |
 |---|---|---|---|
-| 1 | [`01_data_wrangling`](01_data_wrangling.ipynb) | Membaca data, memilih periode, memeriksa dan menangani missing value | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/01_data_wrangling.ipynb) |
-| 2 | [`02_eda`](02_eda.ipynb) | Statistik deskriptif, tren, pola bulanan, distribusi, ACF/PACF | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/02_eda.ipynb) |
-| 3 | [`03_feature_engineering`](03_feature_engineering.ipynb) | Fitur lag, rolling mean, fitur musiman, split kronologis latih/uji | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/03_feature_engineering.ipynb) |
-| 4 | [`04_svr_modeling`](04_svr_modeling.ipynb) | Baseline naive, tuning SVR dengan `TimeSeriesSplit`, evaluasi, analisis residual, dan eksperimen variabel polutan tambahan | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/04_svr_modeling.ipynb) |
+| 1 | [`01_data_wrangling`](01_data_wrangling.ipynb) | Membaca data, memilih periode, memeriksa dan menangani missing value | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/01_data_wrangling.ipynb) |
+| 2 | [`02_eda`](02_eda.ipynb) | Statistik deskriptif, tren, pola bulanan, distribusi, ACF/PACF | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/02_eda.ipynb) |
+| 3 | [`03_feature_engineering`](03_feature_engineering.ipynb) | Fitur lag, rolling mean, fitur musiman, split kronologis latih/uji | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/03_feature_engineering.ipynb) |
+| 4 | [`04_svr_modeling`](04_svr_modeling.ipynb) | Baseline naive, tuning SVR dengan `TimeSeriesSplit`, evaluasi, analisis residual, dan eksperimen variabel polutan tambahan | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/04_svr_modeling.ipynb) |
 
 ## Dokumentasi
 
@@ -116,7 +116,7 @@ Daftar lengkap: [`docs/metodologi.md`](docs/metodologi.md#referensi).
 
 ## Penulis
 
-**[Nama Kamu]** — Lulusan Matematika · [LinkedIn](#) · [Email](#)
+**YudhaAlfarizi** — Lulusan Matematika · [LinkedIn](#) · [Email](#)
 
 ## Lisensi
 
