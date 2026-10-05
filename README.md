@@ -38,7 +38,7 @@ Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF**
 - **Sumber:** Indeks Standar Pencemar Udara (ISPU) DKI Jakarta, diterbitkan Dinas Lingkungan Hidup Provinsi DKI Jakarta melalui portal Satu Data Indonesia
 - **File:** `ispu_dki_all.csv`, gabungan data 5 stasiun pemantau kualitas udara (SPKU)
 - **Periode dipakai:** 1 Januari 2021 – 28 Februari 2025 (nilai PM2.5 baru tersedia sejak 2021)
-- **Target:** `pm25`, yaitu nilai ISPU PM2.5 tertinggi di antara 5 stasiun pada hari tersebut
+- **Target:** `pm25`
 - **Satuan:** ISPU adalah **angka indeks tanpa satuan** (dikonfirmasi Dinas Lingkungan Hidup DKI Jakarta), bukan konsentrasi µg/m³
 
 Detail lengkap dan angka yang dihasilkan notebook 01: [`docs/dataset.md`](docs/dataset.md).
