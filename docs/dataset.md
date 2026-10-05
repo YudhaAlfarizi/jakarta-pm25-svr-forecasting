@@ -10,7 +10,7 @@
 - **File yang dipakai:** `ispu_dki_all.csv`
 - **Cakupan file:** 1 Januari 2010 – 28 Februari 2025
 
-**Tautan dataset:** [ISI: tempelkan di sini tautan persis halaman unduhan `ispu_dki_all.csv` yang kamu pakai, mis. dari katalog.data.go.id]
+**Tautan dataset:** [https://www.kaggle.com/datasets/senadu34/air-quality-index-in-jakarta-2010-2021]
 
 Cek juga apakah versi data yang lebih baru/lengkap tersedia di `udara.jakarta.go.id` (situs resmi Dinas LH DKI Jakarta untuk pemantauan kualitas udara), terutama jika ingin memperpanjang periode data di masa depan.
 
@@ -50,13 +50,9 @@ Notebook 01 memverifikasi dan mencatat secara pasti:
 - jumlah dan lokasi missing value pada `pm25` serta variabel lain,
 - statistik deskriptif dan korelasi antar polutan.
 
-> Angka-angka ini sebelumnya sudah dihitung langsung dari file yang diunggah dan disebut di sepanjang diskusi proyek ini (misalnya 1.520 hari, 4 hari kosong pada `pm25`, korelasi PM10 sekitar 0,80). Angka itu berasal dari perhitungan nyata, bukan perkiraan, tetapi tetap **harus dihasilkan ulang oleh notebook 01** dan dicatat di sana, supaya siapa pun yang menjalankan proyek ini bisa memverifikasi sendiri dari file CSV, bukan mempercayai angka yang ditempel di dokumentasi.
-
 ## 5. `ispu_dki_all.csv` adalah gabungan 5 stasiun
 
 Satu baris per tanggal. Kolom `stasiun` menunjukkan **stasiun mana yang nilainya tertinggi pada hari itu**, dan berganti-ganti setiap hari. Seri yang dimodelkan adalah:
-
-> **nilai ISPU PM2.5 tertinggi di antara 5 stasiun pemantau DKI Jakarta per hari.**
 
 Implikasi:
 - `stasiun` **tidak dipakai sebagai fitur**, karena tidak diketahui sebelum hari itu terjadi.
@@ -124,6 +120,6 @@ Semua variabel pendukung memakai nilai **hari sebelumnya** (`shift(1)`), karena 
 
 ## 10. Cara mendapatkan data
 
-1. Unduh `ispu_dki_all.csv` dari sumber pada bagian [Sumber Data](#1-sumber-data).
+1. Unduh `ispu_dki_all.csv` dari sumber pada bagian [Sumber Data]([data/ispu_dki_all.csv](https://www.kaggle.com/datasets/senadu34/air-quality-index-in-jakarta-2010-2021)).
 2. Simpan sebagai `data/ispu_dki_all.csv`.
 3. Jalankan `01_data_wrangling.ipynb`, yang menghasilkan `data/pm25_daily.csv`.
