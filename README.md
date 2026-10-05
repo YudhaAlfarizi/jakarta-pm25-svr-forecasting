@@ -116,8 +116,7 @@ jupyter notebook
 
 ## Penulis
 
-**[Yudha Alfarizi]** — Lulusan Matematika S1 · [LinkedIn]([#](https://www.linkedin.com/in/yudha-alfarizi-07588a286/)) · [Email]([#](https://mail.google.com/mail/?view=cm&fs=1&to=yudhaaakerja29072026@gmail.com))
-
+**Yudha Alfarizi** — Lulusan Matematika S1· [LinkedIn](https://www.linkedin.com/in/yudha-alfarizi-07588a286/) · [📧 Email](https://mail.google.com/mail/?view=cm&fs=1&to=yudhaaakerja29072026@gmail.com)
 ## Lisensi
 
 Kode dirilis di bawah lisensi MIT. Dataset mengikuti lisensi sumber aslinya (Kaggle).
