@@ -12,14 +12,12 @@ Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF**
 
 ## Notebook
 
-Jalankan berurutan. Klik tombol Colab untuk membuka langsung.
-
 | # | Notebook | Isi | Colab |
 |---|---|---|---|
-| 1 | [`01_data_wrangling`](01_data_wrangling.ipynb) | Membaca data, memilih periode, memeriksa dan menangani missing value | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/01_data_wrangling.ipynb) |
-| 2 | [`02_eda`](02_eda.ipynb) | Statistik deskriptif, tren, pola bulanan, distribusi, ACF/PACF | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/02_eda.ipynb) |
-| 3 | [`03_feature_engineering`](03_feature_engineering.ipynb) | Fitur lag, rolling mean, fitur musiman, split kronologis latih/uji | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/03_feature_engineering.ipynb) |
-| 4 | [`04_svr_modeling`](04_svr_modeling.ipynb) | Baseline naive, **forward selection** (memilih fitur final dari kandidat lag notebook 02-03 berdasarkan performa), tuning SVR dengan `TimeSeriesSplit`, evaluasi, analisis residual, dan eksperimen variabel polutan tambahan | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/jakarta-pm25-svr-forecasting/blob/main/04_svr_modeling.ipynb) |
+| 1 | [`01_data_wrangling`](01_data_wrangling.ipynb) | Membaca data, memilih periode, memeriksa dan menangani missing value | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/01_data_wrangling.ipynb) |
+| 2 | [`02_eda`](02_eda.ipynb) | Statistik deskriptif, tren, pola bulanan, distribusi, ACF/PACF | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/02_eda.ipynb) |
+| 3 | [`03_feature_engineering`](03_feature_engineering.ipynb) | Fitur lag, rolling mean, fitur musiman, split kronologis latih/uji | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/03_feature_engineering.ipynb) |
+| 4 | [`04_svr_modeling`](04_svr_modeling.ipynb) | Baseline naive, **forward selection** (memilih fitur final dari kandidat lag notebook 02-03 berdasarkan performa), tuning SVR dengan `TimeSeriesSplit`, evaluasi, analisis residual, dan eksperimen variabel polutan tambahan | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YudhaAlfarizi/jakarta-pm25-svr-forecasting/blob/main/04_svr_modeling.ipynb) |
 
 ## Dokumentasi
 
@@ -47,8 +45,6 @@ Detail lengkap dan angka yang dihasilkan notebook 01: [`docs/dataset.md`](docs/d
 
 ## Hasil
 
-> Diisi setelah notebook 04 dijalankan.
-
 | Model | RMSE | MAE | sMAPE (%) | R² |
 |---|---|---|---|---|
 | Naive (persistence) | 18.65 | 14.00 | 19.73 | 0.41 |
@@ -57,7 +53,6 @@ Detail lengkap dan angka yang dihasilkan notebook 01: [`docs/dataset.md`](docs/d
 | SVR + PM10 | 18.87 | 14.45 | 19.81 | 0.37 |
 | SVR + semua polutan | 20.29 | 15.88 | 21.82 | 0.28 |
 
-> Angka di atas berasal dari satu kali uji coba notebook di lingkungan pengembangan. **Jalankan ulang notebook 04 di Colab-mu sendiri** dan perbarui tabel ini dengan hasil aktualmu, karena hasil forward selection bisa sedikit berbeda tergantung versi library.
 
 ![Aktual vs Prediksi](docs/actual_vs_pred.png)
 
@@ -119,19 +114,10 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-## Referensi Utama
-
-1. Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice* (3rd ed.). OTexts. https://otexts.com/fpp3/
-2. Smola, A. J., & Schölkopf, B. (2004). A tutorial on support vector regression. *Statistics and Computing*, 14(3).
-3. Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12.
-4. Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia. Peraturan Menteri LHK No. 14 Tahun 2020 tentang Indeks Standar Pencemar Udara.
-
-Daftar lengkap: [`docs/metodologi.md`](docs/metodologi.md#referensi).
-
 ## Penulis
 
-**[Nama Kamu]** — Lulusan Matematika · [LinkedIn](#) · [Email](#)
+**[Yudha Alfarizi]** — Lulusan Matematika S1 · [LinkedIn]([#](https://www.linkedin.com/in/yudha-alfarizi-07588a286/)) · [Email]([#](https://mail.google.com/mail/?view=cm&fs=1&to=yudhaaakerja29072026@gmail.com))
 
 ## Lisensi
 
-Kode dirilis di bawah lisensi MIT. Dataset mengikuti lisensi sumber aslinya (Satu Data Indonesia).
+Kode dirilis di bawah lisensi MIT. Dataset mengikuti lisensi sumber aslinya (Kaggle).
