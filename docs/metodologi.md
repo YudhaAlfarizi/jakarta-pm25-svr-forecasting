@@ -153,6 +153,7 @@ Galat di dalam tabung selebar $\varepsilon$ tidak dihukum.
 
 $$\min_{\mathbf{w}, b, \xi, \xi^*} \frac{1}{2}|\mathbf{w}|^2 + C\sum_{i=1}^{n}(\xi_i + \xi_i^*)$$
 
+
 dengan kendala
 
 $$
