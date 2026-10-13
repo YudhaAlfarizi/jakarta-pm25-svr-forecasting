@@ -26,16 +26,16 @@ flowchart LR
 
 | No | Langkah | Alasan | Sifat | Notebook |
 |---|---|---|---|---|
-| 1 | Pemahaman data | Menemukan masalah sejak awal (mis. PM2.5 baru ada sejak 2021, `ispu_dki_all` gabungan 5 stasiun) | Literatur [1] | 01 |
+| 1 | Pemahaman data | Menemukan masalah sejak awal (mis. PM2.5 baru ada sejak 2021, `ispu_dki_all` gabungan 5 stasiun) |  | 01 |
 | 2 | Penanganan missing value | Interpolasi pada celah panjang menciptakan data buatan yang terlalu mulus | **Keputusan desain** | 01 |
-| 3 | EDA dan ACF/PACF | Memberi **kandidat lag yang luas**, berdasarkan besaran PACF, bukan cuma status "signifikan" (yang longgar pada n besar) | Literatur [2][3] | 02 |
-| 4 | Feature engineering | SVR menerima data tabular (X, y); seluruh kandidat lag dari langkah 3 dibentuk sebagai kolom, belum disaring | Literatur [4] | 03 |
-| 5 | Split kronologis | Split acak membocorkan masa depan ke data latih dan membuat hasil tampak terlalu baik | Literatur [5][6][7] | 03 |
-| 6 | **Forward selection** | Menyaring kandidat luas menjadi fitur final **berdasarkan performa model** (RMSE `TimeSeriesSplit`), bukan ambang ACF/PACF | Literatur [17][18] | 04 |
-| 7 | Scaling dalam `Pipeline` | Kernel RBF berbasis jarak sehingga sensitif terhadap skala fitur; scaler hanya di-*fit* pada data latih | Literatur [8], dokumentasi scikit-learn | 04 |
-| 8 | Tuning dengan `TimeSeriesSplit` | Cross-validation biasa mengacak waktu; `TimeSeriesSplit` selalu melatih pada masa lalu dan menguji pada masa depan, dilakukan setelah fitur final ditentukan | Literatur [2][9] | 04 |
-| 9 | Evaluasi terhadap baseline | Model berguna hanya jika mengalahkan tebakan paling sederhana; RMSE dan MAE dilaporkan bersama karena sensitivitasnya berbeda terhadap outlier | Literatur [10][11] | 04 |
-| 10 | Analisis residual | Residual yang berpola atau berautokorelasi menandakan informasi yang belum ditangkap model | Literatur [2] | 04 |
+| 3 | EDA dan ACF/PACF | Memberi **kandidat lag yang luas**, berdasarkan besaran PACF, bukan cuma status "signifikan" (yang longgar pada n besar) |  | 02 |
+| 4 | Feature engineering | SVR menerima data tabular (X, y); seluruh kandidat lag dari langkah 3 dibentuk sebagai kolom, belum disaring | | 03 |
+| 5 | Split kronologis | Split acak membocorkan masa depan ke data latih dan membuat hasil tampak terlalu baik | | 03 |
+| 6 | **Forward selection** | Menyaring kandidat luas menjadi fitur final **berdasarkan performa model** (RMSE `TimeSeriesSplit`), bukan ambang ACF/PACF |  | 04 |
+| 7 | Scaling dalam `Pipeline` | Kernel RBF berbasis jarak sehingga sensitif terhadap skala fitur; scaler hanya di-*fit* pada data latih | | 04 |
+| 8 | Tuning dengan `TimeSeriesSplit` | Cross-validation biasa mengacak waktu; `TimeSeriesSplit` selalu melatih pada masa lalu dan menguji pada masa depan, dilakukan setelah fitur final ditentukan | | 04 |
+| 9 | Evaluasi terhadap baseline | Model berguna hanya jika mengalahkan tebakan paling sederhana; RMSE dan MAE dilaporkan bersama karena sensitivitasnya berbeda terhadap outlier |  | 04 |
+| 10 | Analisis residual | Residual yang berpola atau berautokorelasi menandakan informasi yang belum ditangkap model |  | 04 |
 | 11 | Eksperimen variabel tambahan | Menjawab "apakah polutan lain perlu?" dengan bukti empiris, bukan asumsi | **Keputusan desain** | 04 |
 
 ## 3. Penanganan missing value
