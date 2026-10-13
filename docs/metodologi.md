@@ -151,7 +151,15 @@ Galat di dalam tabung selebar $\varepsilon$ tidak dihukum.
 
 ### 10.3 Masalah optimasi primal
 
-$$\min_{\mathbf{w},\,b,\,\xi,\,\xi^*} \; \frac{1}{2}\|\mathbf{w}\|^2 + C\sum_{i=1}^{n}(\xi_i + \xi_i^*)$$
+\begin{equation}
+\begin{aligned}
+&\min_{\mathbf{w}, b, \xi, \xi^*} && \frac{1}{2}\|\mathbf{w}\|^2 + C\sum_{i=1}^{n}(\xi_i + \xi_i^*) \\
+&\text{dengan kendala} && y_i - \mathbf{w}^T \mathbf{x}_i - b \leq \epsilon + \xi_i, \quad i=1,\dots,n \\
+& && \mathbf{w}^T \mathbf{x}_i + b - y_i \leq \epsilon + \xi_i^*, \quad i=1,\dots,n \\
+& && \xi_i, \xi_i^* \geq 0, \quad i=1,\dots,n
+\end{aligned}
+\end{equation}
+
 
 dengan kendala
 
