@@ -8,14 +8,6 @@
 
 Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF** untuk meramalkan **nilai PM2.5 harian DKI Jakarta satu hari ke depan** (*one-step-ahead forecasting*), menggunakan data Indeks Standar Pencemar Udara (ISPU) periode 2021–2025. Model dievaluasi dengan validasi yang menjaga urutan waktu (*time series cross-validation*), tanpa kebocoran data, dan dibandingkan dengan baseline *naive (persistence)*.
 
-## 📈 Temuan Kunci (Key Findings)
-
-1. **SVR mengalahkan baseline, tetapi keunggulannya moderat.** RMSE turun dari 18,65 (naive) menjadi 16,59 (turun 11,0%), dan R² naik dari 0,41 menjadi 0,53. Model menjelaskan sekitar separuh variasi harian PM2.5; sisanya (±47%) belum terjelaskan oleh riwayat PM2.5 saja.
-2. **Lebih sedikit fitur justru lebih baik.** Dari 12 kandidat fitur, forward selection dengan `TimeSeriesSplit` hanya memilih 2: nilai kemarin (`pm25_lag1`) dan rata-rata 14 hari (`pm25_roll14`). Menambah fitur ketiga (lag 10) menaikkan RMSE validasi dari 20,65 menjadi 21,28, dan fitur musiman bulan tidak terpilih. Lag yang lolos uji PACF belum tentu berguna bagi model ([grafik](docs/forward_selection.png)).
-3. **CO dan O₃ membantu sedikit, PM10 tidak.** Pada baris data yang sama untuk semua skenario, menambah CO dan O₃ menurunkan RMSE dari 17,07 menjadi 16,37 (4,1%). Menambah PM10 justru memperburuk hasil menjadi 18,26, dan gabungan semua polutan paling buruk (20,44). Penyebab PM10 merugikan belum diuji.
-4. **Model sulit menangkap perubahan mendadak.** Empat dari lima kesalahan terbesar adalah lonjakan yang diremehkan, misalnya 17 November 2024: aktual 157, prediksi SVR 114 (selisih ±43 poin). Kesalahan terbesar justru penurunan tajam: pada 29 November 2024 aktual 10 tetapi prediksi 64 (selisih ±54 poin).
-5. **Pola musiman dan pergeseran level memengaruhi evaluasi.** Rata-rata PM2.5 tertinggi pada Juli (111,3) dan terendah pada Januari (69,2). Periode uji (Agustus 2024 – Februari 2025) rata-ratanya 78,1, sekitar 15% lebih rendah dari data latih (91,6), sehingga hasil uji belum tentu mewakili periode lain.
-
 ## Notebook
 
 | # | Notebook | Isi | Colab |
@@ -67,6 +59,12 @@ Semua skenario dilatih dan diuji pada **baris yang sama** (1.153 hari latih, 204
 
 Tabel prediksi harian lengkap (aktual vs SVR vs naive, 210 hari data uji): [`docs/hasil_prediksi.csv`](docs/hasil_prediksi.csv).
 
+## 📈 Temuan Kunci (Key Findings)
+
+1. **SVR mengalahkan baseline, tetapi keunggulannya moderat.** RMSE turun dari 18,65 (naive) menjadi 16,59 (turun 11,0%), dan R² naik dari 0,41 menjadi 0,53.
+2. **CO dan O₃ membantu sedikit, PM10 tidak.** Pada baris data yang sama untuk semua skenario, menambah CO dan O₃ menurunkan RMSE dari 17,07 menjadi 16,37 (4,1%). Menambah PM10 justru memperburuk hasil menjadi 18,26, dan gabungan semua polutan paling buruk (20,44).
+3. **Model sulit menangkap perubahan mendadak.** Empat dari lima kesalahan terbesar adalah lonjakan yang diremehkan, misalnya 17 November 2024: aktual 157, prediksi SVR 114 (selisih ±43 poin). Kesalahan terbesar justru penurunan tajam: pada 29 November 2024 aktual 10 tetapi prediksi 64 (selisih ±54 poin).
+4. **Pola musiman dan pergeseran level memengaruhi evaluasi.** Rata-rata PM2.5 tertinggi pada Juli (111,3) dan terendah pada Januari (69,2). Periode uji (Agustus 2024 – Februari 2025) rata-ratanya 78,1, sekitar 15% lebih rendah dari data latih (91,6), sehingga hasil uji belum tentu mewakili periode lain.
 
 ## Struktur Repositori
 
