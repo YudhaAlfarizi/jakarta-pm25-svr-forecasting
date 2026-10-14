@@ -8,7 +8,7 @@
 
 Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF** untuk meramalkan **nilai PM2.5 harian DKI Jakarta satu hari ke depan** (*one-step-ahead forecasting*), menggunakan data Indeks Standar Pencemar Udara (ISPU) periode 2021–2025. Model dievaluasi dengan validasi yang menjaga urutan waktu (*time series cross-validation*), tanpa kebocoran data, dan dibandingkan dengan baseline *naive (persistence)*.
 
-## Temuan Kunci
+## 📈 Temuan Kunci (Key Findings)
 
 1. **SVR mengalahkan baseline, tetapi keunggulannya moderat.** RMSE turun dari 18,65 (naive) menjadi 16,59 (turun 11,0%), dan R² naik dari 0,41 menjadi 0,53. Model menjelaskan sekitar separuh variasi harian PM2.5; sisanya (±47%) belum terjelaskan oleh riwayat PM2.5 saja.
 2. **Lebih sedikit fitur justru lebih baik.** Dari 12 kandidat fitur, forward selection dengan `TimeSeriesSplit` hanya memilih 2: nilai kemarin (`pm25_lag1`) dan rata-rata 14 hari (`pm25_roll14`). Menambah fitur ketiga (lag 10) menaikkan RMSE validasi dari 20,65 menjadi 21,28, dan fitur musiman bulan tidak terpilih. Lag yang lolos uji PACF belum tentu berguna bagi model ([grafik](docs/forward_selection.png)).
@@ -30,7 +30,7 @@ Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF**
 - [`docs/dataset.md`](docs/dataset.md) — sumber data, kolom, karakteristik dan masalah kualitas data, cara mengunduh
 - [`docs/metodologi.md`](docs/metodologi.md) — alur penelitian, alasan tiap langkah, landasan matematis SVR, referensi
 
-## 📈 Temuan Kunci (Key Findings)
+## Ringkasan Data
 
 - **Sumber:** Indeks Standar Pencemar Udara (ISPU) DKI Jakarta, diterbitkan Dinas Lingkungan Hidup Provinsi DKI Jakarta melalui portal Satu Data Indonesia
 - **File:** `ispu_dki_all.csv`, gabungan data 5 stasiun pemantau kualitas udara (SPKU)
@@ -40,7 +40,7 @@ Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF**
 
 Detail lengkap dan angka yang dihasilkan notebook 01: [`docs/dataset.md`](docs/dataset.md).
 
-## Hasil
+## Hasil Proyek
 
 ### Hasil utama (seluruh data uji, 210 hari)
 
