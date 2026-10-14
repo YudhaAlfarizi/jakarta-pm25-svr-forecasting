@@ -4,7 +4,7 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-SVR-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-## Deskripsi
+## 📌 Deskripsi Proyek
 
 Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF** untuk meramalkan **nilai PM2.5 harian DKI Jakarta satu hari ke depan** (*one-step-ahead forecasting*), menggunakan data Indeks Standar Pencemar Udara (ISPU) periode 2021–2025. Model dievaluasi dengan validasi yang menjaga urutan waktu (*time series cross-validation*), tanpa kebocoran data, dan dibandingkan dengan baseline *naive (persistence)*.
 
@@ -30,7 +30,7 @@ Proyek ini membangun model **Support Vector Regression (SVR)** berkernel **RBF**
 - [`docs/dataset.md`](docs/dataset.md) — sumber data, kolom, karakteristik dan masalah kualitas data, cara mengunduh
 - [`docs/metodologi.md`](docs/metodologi.md) — alur penelitian, alasan tiap langkah, landasan matematis SVR, referensi
 
-## Ringkasan Data
+## 📈 Temuan Kunci (Key Findings)
 
 - **Sumber:** Indeks Standar Pencemar Udara (ISPU) DKI Jakarta, diterbitkan Dinas Lingkungan Hidup Provinsi DKI Jakarta melalui portal Satu Data Indonesia
 - **File:** `ispu_dki_all.csv`, gabungan data 5 stasiun pemantau kualitas udara (SPKU)
@@ -67,20 +67,13 @@ Semua skenario dilatih dan diuji pada **baris yang sama** (1.153 hari latih, 204
 
 Tabel prediksi harian lengkap (aktual vs SVR vs naive, 210 hari data uji): [`docs/hasil_prediksi.csv`](docs/hasil_prediksi.csv).
 
-## Keterbatasan
-
-- Nilai PM2.5 hanya tersedia ±4 tahun, sehingga siklus musiman teramati terbatas.
-- Target adalah nilai PM2.5 dari stasiun ber-ISPU tertinggi pada hari itu, bukan pengukuran satu lokasi, dan belum tentu PM2.5 tertinggi di antara 5 stasiun.
-- ISPU adalah angka indeks, bukan konsentrasi fisik, sehingga tidak bisa dibandingkan langsung dengan standar µg/m³ negara lain.
-- Periode uji (akhir 2024–awal 2025) cenderung lebih rendah nilainya dibanding data latih.
-- Model hanya meramalkan satu langkah ke depan dan tidak memakai variabel meteorologi.
 
 ## Struktur Repositori
 
 ```
 jakarta-pm25-svr-forecasting/
-├── data/            # data mentah (ispu_dki_all.csv) dan hasil olahan notebook 01 dan 03
-├── docs/            # dataset.md, metodologi.md, gambar hasil, dan hasil_prediksi.csv
+├── data/            
+├── docs/          
 ├── 01_data_wrangling.ipynb
 ├── 02_eda.ipynb
 ├── 03_feature_engineering.ipynb
@@ -90,7 +83,7 @@ jakarta-pm25-svr-forecasting/
 └── LICENSE
 ```
 
-## Cara Menjalankan
+## 🚀 Cara Menjalankan Model
 
 **Google Colab (disarankan):** klik tombol Colab di tabel notebook, lalu *Runtime → Run all*, dimulai dari notebook 1.
 
