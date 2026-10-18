@@ -12,9 +12,7 @@
 
 **Tautan dataset:** [https://www.kaggle.com/datasets/senadu34/air-quality-index-in-jakarta-2010-2021]
 
-Cek juga apakah versi data yang lebih baru/lengkap tersedia di `udara.jakarta.go.id` (situs resmi Dinas LH DKI Jakarta untuk pemantauan kualitas udara), terutama jika ingin memperpanjang periode data di masa depan.
 
-Periksa lisensi/ketentuan penggunaan di halaman sumber sebelum mengunggah file mentah ke repositori publik.
 
 ## 2. Kolom
 
