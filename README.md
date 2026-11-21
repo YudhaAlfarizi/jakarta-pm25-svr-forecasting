@@ -4,7 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-SVR-orange)
-[![Colab](https://img.shields.io/badge/Google%20Colab-Buka%20Notebook-F9AB00?logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/USERNAME/NAMA-REPO/blob/main/nama_notebook.ipynb)
+[![Colab](https://img.shields.io/badge/Google%20Colab-Buka%20Notebook-F9AB00?logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/YudhaALfarizi)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
