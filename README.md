@@ -1,8 +1,12 @@
+<div align="center">
+
 # Peramalan Nilai PM2.5 Harian DKI Jakarta Menggunakan Support Vector Regression dengan Time Series Cross-Validation
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-SVR-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
+
+</div>
 
 ## 📌 Deskripsi Proyek
 
